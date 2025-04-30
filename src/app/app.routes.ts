@@ -18,7 +18,7 @@ export const routes: Routes = [
   {
     path: '',
     component: DefaultLayoutComponent,
-    canActivate: [authGuard],
+    // canActivate: [authGuard],
     data: {
       title: 'Home'
     },
@@ -35,43 +35,19 @@ export const routes: Routes = [
        // canActivate: [adminGuard],
         loadChildren: () => import('./views/Users/routes').then((m) => m.routes)
       },
+     
       {
-        path: 'bidashboard',
-        
-        loadChildren: () => import('./views/BI-Dashboard/routes').then((m) => m.routes)
- 
-      },
-      {
-        path: 'category',
-        
-        loadChildren: () => import('./views/category/routes').then((m) => m.routes)
-      },
-      {
-        path: 'product',
-        
+        path:'product',
+       // canActivate: [adminGuard],
         loadChildren: () => import('./views/product/routes').then((m) => m.routes)
       },
-      {
-        path: 'inventory',
-        canActivate: [adminGuard],
-        loadChildren: () => import('./views/inventory/routes').then((m) => m.routes)
-      },
-      {
-        path: 'branch',
-        canActivate: [adminGuard],
-        loadChildren: () => import('./views/Branch/routes').then((m) => m.routes) 
-      },
+      
  
       {
         path: 'widgets',
         loadChildren: () => import('./views/widgets/routes').then((m) => m.routes)
       },
-      {
-        path: 'Brand',
-        canActivate: [adminGuard],
-        loadChildren: () => import('./views/Brand/routes').then((m) => m.routes)
-      },
-
+      
     
     ]
   },

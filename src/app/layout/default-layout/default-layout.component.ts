@@ -63,43 +63,9 @@ export class DefaultLayoutComponent implements OnInit {
   })
 
   if (this.userRole == 'Supplier') {
-    this.navItems.push({
-      name: 'Dashboard',
-      url: '/dashboard',
-      iconComponent: { name: 'cil-speedometer' },
-    },
-    {
-      name: 'Product',
-      url: '/product',
-      iconComponent: { name: 'cilBasket' },
-      children: [
-        {
-          name: 'Manage Products',
-          url: '/product/manage',
-          icon: 'nav-icon-bullet',
-        },
-        {
-          name: 'Product Attributes',
-          url: '/product/product-attributes',
-          icon: 'nav-icon-bullet',
-        },
-      ],
-    },
-     //BI-Dashboard
-     {
-      name: 'BI-Dashboard',
-      url: '/bidashboard',
-      iconComponent: { name: 'cilChart' },
-      children: [
-
-        {
-          name: 'Supplier',
-          url: '/bidashboard/supplier',
-          icon: 'nav-icon-bullet',
-        },
-      ],
-    },
-    //End BI-Dashboard
+    this.navItems.push(
+      // add here what you want supplier to see
+    
     {
       title: true,
       name: 'Account',
@@ -114,13 +80,9 @@ export class DefaultLayoutComponent implements OnInit {
   }
   else if (this.userRole == 'Admin') {
     this.navItems.push(
-      {
-        name: 'Dashboard',
-        url: '/dashboard',
-        iconComponent: { name: 'cil-speedometer' },
-      },
- 
-    // users :
+       // add here what you want supplier to see
+       
+    // users 
     {
       name: 'Users',
       url: '/users',
@@ -135,136 +97,22 @@ export class DefaultLayoutComponent implements OnInit {
     },
     /// end users
 
- 
-      
-       //BI-Dashboard
-       {
-        name: 'BI-Dashboard',
-        url: '/bidashboard',
-        iconComponent: { name: 'cilChart' },
-        children: [
-          {
-            name: 'Customers',
-            url: '/bidashboard/customers',
-            icon: 'nav-icon-bullet',
-          },
-          {
-            name: 'Products',
-            url: '/bidashboard/products',
-            icon: 'nav-icon-bullet',
-          },
-          {
-            name: 'Branches & Inventories',
-
-            url: '/bidashboard/branches-inventories',
-            icon: 'nav-icon-bullet',
-          },
-          {
-            name: 'Sales & Orders',
-            url: '/bidashboard/sales-orders',
-            icon: 'nav-icon-bullet',
-          }
-        ],
-      },
-      //End BI-Dashboard
-      // Category
-      {
-        name:'Category',
-        url: '/category',
-        iconComponent: { name: 'cilBasket' },
-        children:[
-          {
-            name:'Manage Category',
-            url:'/category/manage',
-            icon:'nav-icon-bullet',
-          }
-        ]
-      },
-      //End Category
-      //Products
-      {
-        name: 'Product',
-        url: '/product',
-        iconComponent: { name: 'cilBasket' },
-        children: [
-          {
-            name: 'Manage Products',
-            url: '/product/manage',
-            icon: 'nav-icon-bullet',
-          },
-          {
-            name: 'Product Attributes',
-            url: '/product/product-attributes',
-            icon: 'nav-icon-bullet',
-          },
-          {
-            name: 'Review Products',
-            url: '/product/review-products',
-            icon: 'nav-icon-bullet',
-          },
-          {
-            name: 'Manage Discounts',
-            url: '/product/manage-discounts',
-            icon: 'nav-icon-bullet',
-          },
-          {
-            name: 'Inventory Transaction',
-            url: '/product/manage-transaction',
-            icon: 'nav-icon-bullet',
-          },
-        ],
-      },
-      //End Products
-    
-       //Inventory
-       {
-        name: 'Inventory',
-        url: '/inventory',
-        iconComponent: { name: 'cilLayers' },
-        children: [
-          {
-            name: 'Manage Inventories',
-            url: '/inventory/manage',
-            icon: 'nav-icon-bullet',
-          },
-        ],
-      },
-      //End end
-
-  
-         //branchs
-         {
-          name: 'Branch',
-          url: '/branch',
-          iconComponent: { name: 'cilMap' },
-          children: [
-            {
-              name: 'Manage Branches',
-              url: '/branch/manage',
-              icon: 'nav-icon-bullet',
-            },
-          ],
-        },
-        //End branchs
-    
-    
-    
-     //  brands :
-    
+     // users 
      {
-      name: 'Brands',
-      url: '/brands',
-      iconComponent: { name: 'cil-tags' },
+      name: 'Products',
+      url: '/prodcut',
+      iconComponent: { name: 'cil-people' },
       children: [
         {
-          name: 'Manage Brands',
-          url: '/Brand/manage',
+          name: 'Manage Products',
+          url: '/product/manage-products',
           icon: 'nav-icon-bullet',
         },
-        
       ],
     },
-    // end brands 
+    /// end users
+
+ 
       {
         title: true,
         name: 'Account',
